@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+</head>
+<body>
+<h1>Dog</h1>
+<p th:text="${dog.getName()}"></p>
+<p th:text="${dog.getAge()}"></p>
+<p th:text="${dog.getBreed()}"></p>
+<p th:hidden="${printStuff}">Hello You will see this, because it is <b>not</b> hidden.</p>
+<p th:hidden="${doNotPrintStuff}">Goodbye you will not see this</p>
+<ul>
+    <li th:each="number : ${numbers}" th:text="${number}">number</li>
+</ul>
+</body>
+</html>
